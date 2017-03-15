@@ -16,6 +16,16 @@ td, th {
   margin:0;
   padding:4px;
 }
+.current-date {
+  background-color: #56CCF2;
+  border-radius: 2em;
+  text-align:center;
+  display: block;
+  border: 1px solid black;
+  font-weight: bold;
+  font-size: 20px;
+  height: 2em;
+}
 
 button {
   background-color: #56CCF2;

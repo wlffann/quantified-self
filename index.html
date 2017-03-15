@@ -1,20 +1,23 @@
 <!DOCTYPE html>
 <head>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.10.3/moment.js"></script>
   <script
     src="https://code.jquery.com/jquery-3.1.1.js"
     integrity="sha256-16cdPddA6VdVInumRGo6IbivbERE8p7CQR3HzTBuELA="
     crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.10.3/moment.js"></script>
   <script src="./lib/foods.js"></script>
   <script src="./lib/filter_foods.js"></script>
+  <script src="./lib/date.js"></script>
   <script src="./lib/common.js"></script>
   <link type="text/css" rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <link type="text/css" rel="stylesheet" href="./lib/foods.css" >
   <link type="text/css" rel="stylesheet" href="./lib/common.css" >
 </head>
 <body>
- <div class="col-md-6 breakfast">
+  <div class="col-md-6 col-md-offset-1 current-date">
+  </div>
+  <div class="col-md-6 breakfast">
     <h1>Breakfast</h1> 
     <table id="food-list breakfast-list">
       <thead>
@@ -28,9 +31,9 @@
       </tfoot>
     </table>
   </div>
-  <div class="col-md-6 lunch-list">
+  <div class="col-md-6 lunch">
     <h1>Lunch</h1>
-    <table>
+    <table id="food-list lunch-list">
         <thead>
           <tr><th>Name</th><th>Calories</th></tr>
         </thead>
