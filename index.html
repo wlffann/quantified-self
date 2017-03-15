@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<head>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script
+    src="https://code.jquery.com/jquery-3.1.1.js"
+    integrity="sha256-16cdPddA6VdVInumRGo6IbivbERE8p7CQR3HzTBuELA="
+    crossorigin="anonymous"></script>
+  <script src="./lib/foods.js"></script>
+  <script src="./lib/filter_foods.js"></script>
+  <script src="./lib/common.js"></script>
+  <link type="text/css" rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link type="text/css" rel="stylesheet" href="./lib/foods.css" >
+  <link type="text/css" rel="stylesheet" href="./lib/common.css" >
+</head>
+<body>
+ <div class="col-md-6 breakfast">
+    <h1>Breakfast</h1> 
+    <table id="food-list breakfast-list">
+      <thead>
+        <tr><th>Name</th><th>Calories</th></tr>
+      </thead>
+      <tbody>
+      </tbody>
+      <tfoot>
+        <tr><th>Total Calories</th><th>100</th></tr>
+        <tr><th>Remaining Calories</th><th>100</th></tr>
+      </tfoot>
+    </table>
+  </div>
+  <div class="col-md-6 lunch-list">
+    <h1>Lunch</h1>
+    <table>
+        <thead>
+          <tr><th>Name</th><th>Calories</th></tr>
+        </thead>
+        <tbody>
+        </tbody>
+        <tfoot>
+          <tr><th>Total Calories</th><th>100</th></tr>
+          <tr><th>Remaining Calories</th><th>100</th></tr>
+        </tfoot>
+      </table>
+  </div>
+  <div class="col-md-6 dinner-list">
+    <h1>Dinner</h1>
+    <table>
+        <thead>
+          <tr><th>Name</th><th>Calories</th></tr>
+        </thead>
+        <tbody>
+        </tbody>
+        <tfoot>
+          <tr><th>Total Calories</th><th>100</th></tr>
+          <tr><th>Remaining Calories</th><th>100</th></tr>
+        </tfoot>
+      </table>
+  </div>
+  <div class="col-md-6 snacks-list">
+    <h1>Snacks</h1>
+    <table>
+        <thead>
+          <tr><th>Name</th><th>Calories</th></tr>
+        </thead>
+        <tbody>
+        </tbody>
+        <tfoot>
+          <tr><th>Total Calories</th><th>100</th></tr>
+          <tr><th>Remaining Calories</th><th>100</th></tr>
+        </tfoot>
+      </table>
+  </div>
+
+  <div class="col-md-6 foods-list">
+    <h1>Foods</h1>
+    <button id="add-food">Create New</button>
+    <h3>Add Selected To</h3>
+    <button class="col-md-4" id="add-food">Breakfast</button>
+    <button class="col-md-4 col-md-offset-4" id="add-food">Lunch</button>
+    <button class="col-md-4" id="add-food">Dinner</button>
+    <button class="col-md-4 col-md-offset-4" id="add-food">Snacks</button>
+    
+    <div id="food-filter">
+      <label>Search by Name
+        <input>
+      </label>
+    </div>
+    <table>
+        <thead>
+          <tr><th>Name</th><th>Calories</th></tr>
+        </thead>
+        <tbody>
+        </tbody>
+        <tfoot>
+          <tr><th>Total Calories</th><th>100</th></tr>
+          <tr><th>Remaining Calories</th><th>100</th></tr>
+        </tfoot>
+      </table>
+  </div>
+
+  <div class="col-md-6 totals-list">
+    <h1>Totals</h1>
+    <table>
+        <thead>
+          <tr><th>Name</th><th>Calories</th></tr>
+        </thead>
+        <tbody>
+        </tbody>
+        <tfoot>
+          <tr><th>Goal Calories</th><th>100</th></tr>
+          <tr><th>Calories Consumed</th><th>100</th></tr>
+          <tr><th>Remaining Calories</th><th>100</th></tr>
+        </tfoot>
+      </table>
+  </div>
+
+</body>
+
