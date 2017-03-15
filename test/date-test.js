@@ -5,6 +5,10 @@ describe("#date-carousel", function() {
     $ = document.getElementById("diary-frame").contentWindow.$;
   });
 
+  beforeEach(function() {
+    $('.current-date').html(moment().format("MMMM Do, YYYY"));
+  });
+
   context("When a user visits the index page", function(){
     it ("they see todays date", function(){
       var actualCurrentDate = $(".current-date").text().trim();
@@ -18,6 +22,13 @@ describe("#date-carousel", function() {
       $(".day-foreward").click();
       var actualCurrentDate = $(".current-date").text().trim();
       var expectedCurrentDate = moment().add(1, 'days').format("MMMM Do, YYYY");
+      assert.equal(actualCurrentDate, expectedCurrentDate)
+    });
+
+    it ("they can see 2 days ahead", function(){
+      $(".day-foreward").click();
+      var actualCurrentDate = $(".current-date").text().trim();
+      var expectedCurrentDate = moment().add(2, 'days').format("MMMM Do, YYYY");
       assert.equal(actualCurrentDate, expectedCurrentDate)
     });
   });
