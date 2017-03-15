@@ -6,7 +6,9 @@ describe("#date-carousel", function() {
   });
 
   beforeEach(function() {
-    $('.current-date').html(moment().format("MMMM Do, YYYY"));
+    currentDate = moment().format("MMMM Do, YYYY");
+    $('.current-date').html(currentDate);
+    console.log($('.current-date').html());
   });
 
   context("When a user visits the index page", function(){
@@ -36,6 +38,9 @@ describe("#date-carousel", function() {
   context("When a user visits clicks on the backward button", function(){
     it ("they see the prevous days date", function(){
       $(".day-backward").click();
+      $(".day-backward").click();
+      $(".day-backward").click();
+      
       var actualCurrentDate = $(".current-date").text().trim();
       var expectedCurrentDate = moment().add(-1, 'days').format("MMMM Do, YYYY");
       assert.equal(actualCurrentDate, expectedCurrentDate)

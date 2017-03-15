@@ -27,6 +27,10 @@ td, th {
   height: 2em;
 }
 
+.day-backward {
+  float:left;
+}
+
 button {
   background-color: #56CCF2;
   border-radius: 2em;
