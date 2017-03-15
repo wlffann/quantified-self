@@ -32,4 +32,20 @@ describe("#date-carousel", function() {
       assert.equal(actualCurrentDate, expectedCurrentDate)
     });
   });
+
+  context("When a user visits clicks on the backward button", function(){
+    it ("they see the prevous days date", function(){
+      $(".day-backward").click();
+      var actualCurrentDate = $(".current-date").text().trim();
+      var expectedCurrentDate = moment().add(-1, 'days').format("MMMM Do, YYYY");
+      assert.equal(actualCurrentDate, expectedCurrentDate)
+    });
+
+    it ("they can see 2 days behind", function(){
+      $(".day-backward").click();
+      var actualCurrentDate = $(".current-date").text().trim();
+      var expectedCurrentDate = moment().add(-2, 'days').format("MMMM Do, YYYY");
+      assert.equal(actualCurrentDate, expectedCurrentDate)
+    });
+  });
 });
