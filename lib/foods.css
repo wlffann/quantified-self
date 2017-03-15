@@ -32,3 +32,11 @@ td.food-delete {
 #create-form {
   text-align:right;
 }
+
+.food-row input {
+  height: 30px;
+  font-size: 16px;
+  border:solid black 1px;
+  margin:0;
+  padding:4px;
+}

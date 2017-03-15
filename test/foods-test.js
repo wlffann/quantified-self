@@ -1,5 +1,11 @@
 describe('#create-form', function() {
 
+  var $;
+
+  before(function(){
+    $ = document.getElementById("foods-frame").contentWindow.$;
+  })
+
   beforeEach(function() {
     //Clear out all the things
     $('#food-list tbody').html('');
