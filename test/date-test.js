@@ -6,7 +6,7 @@ describe("#date-carousel", function() {
   });
 
   beforeEach(function() {
-    currentDate = moment().format("MMMM Do, YYYY");
+    var currentDate = moment().format("MMMM Do, YYYY");
     $('.current-date').html(currentDate);
     console.log($('.current-date').html());
   });
@@ -16,6 +16,19 @@ describe("#date-carousel", function() {
       var actualCurrentDate = $(".current-date").text().trim();
       var expectedCurrentDate = moment().format("MMMM Do, YYYY");
       assert.equal(actualCurrentDate, expectedCurrentDate)
+    });
+
+    it ("a date is added to foods_by_days_and_meals in localStorage", function(){
+      var expectedCurrentDate = moment().format("MMMM Do, YYYY");
+      var datesJSON = localStorage.getItem(foods_by_days_and_meals);
+      var dates = JSON.parse(datesJSON);
+      var meals = dates[expectedCurrentDate];
+      var breakfast = meals["breakfast"];
+
+      assert.equal(dates.length, 1);
+      assert.equal(meals.length, 4);
+      assert.equal(meals.length, 4);
+      assert.equal(breakfast.length, 0);
     });
   });
 
@@ -27,12 +40,20 @@ describe("#date-carousel", function() {
       assert.equal(actualCurrentDate, expectedCurrentDate)
     });
 
+    xit ("a date is added to foods_by_days_and_meals in localStorage", function(){
+      var expectedCurrentDate = moment().add(1, 'days').format("MMMM Do, YYYY");
+      var datesJSON = localStorage.getItem(foods_by_days_and_meals)
+      var dates = JSON.parse(datesJSON);
+    });
+
+
     it ("they can see 2 days ahead", function(){
       $(".day-foreward").click();
       var actualCurrentDate = $(".current-date").text().trim();
       var expectedCurrentDate = moment().add(2, 'days').format("MMMM Do, YYYY");
       assert.equal(actualCurrentDate, expectedCurrentDate)
     });
+
   });
 
   context("When a user visits clicks on the backward button", function(){
@@ -53,4 +74,17 @@ describe("#date-carousel", function() {
       assert.equal(actualCurrentDate, expectedCurrentDate)
     });
   });
+
+  // context("When a user clicks on the foreward button", function(){
+  //   it("they see the foods they will eat on the next day", function(){
+  //     var currentDate = moment().add(1, 'days').format("MMMM Do, YYYY")
+  //     var datesJSON = localStorage.getItem("foods_by_days_and_meals");
+  //     var dates = 
+  //     if(foodItemsJSON === null){
+  //   foodItemsJSON = '[]';
+  // }
+  // var currentFoodItems = JSON.parse(foodItemsJSON)
+  //     var foods = dates.
+  //   })
+  // });
 });
