@@ -12,4 +12,13 @@ describe("#date-carousel", function() {
       assert.equal(actualCurrentDate, expectedCurrentDate)
     });
   });
+
+  context("When a user visits clicks on the foreward button", function(){
+    it ("they see tommorows date", function(){
+      $(".day-foreward").click();
+      var actualCurrentDate = $(".current-date").text().trim();
+      var expectedCurrentDate = moment().add(1, 'days').format("MMMM Do, YYYY");
+      assert.equal(actualCurrentDate, expectedCurrentDate)
+    });
+  });
 });
