@@ -1,10 +1,6 @@
 describe("#date-carousel", function() {
   var $;
 
-  function get_length(obj){
-    return Object.keys(obj).length
-  }
-
   before(function(){
     $ = document.getElementById("diary-frame").contentWindow.$;
   });

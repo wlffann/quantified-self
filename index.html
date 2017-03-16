@@ -5,11 +5,13 @@
     integrity="sha256-16cdPddA6VdVInumRGo6IbivbERE8p7CQR3HzTBuELA="
     crossorigin="anonymous"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
   <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.10.3/moment.js"></script>
   <script src="./lib/foods.js"></script>
   <script src="./lib/filter_foods.js"></script>
   <script src="./lib/date.js"></script>
   <script src="./lib/common.js"></script>
+  <script src="./lib/total-calories.js"></script>
   <script src="./lib/index.js"></script>
   <link type="text/css" rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <link type="text/css" rel="stylesheet" href="./lib/foods.css" >
@@ -19,7 +21,7 @@
   <button class="day-backward">Backward</button>
   <div class="col-md-6 current-date">
   </div>
-  <button class="day-forward">Foreward</button>
+  <button class="day-forward">Forward</button>
  <div class="col-md-6 breakfast-list">
     <h1>Breakfast</h1>
     <table class="breakfast-table" id="food-list">
@@ -29,8 +31,8 @@
       <tbody>
       </tbody>
       <tfoot>
-        <tr><th class="total-calories">Total Calories</th><th class="total-calories" id="total">100</th></tr>
-        <tr><th class="remaining-calories">Remaining Calories</th><th class="remaining-calories" id="difference">100</th></tr>
+        <tr><th>Total Calories</th><th class="total-calories total">0</th></tr>
+        <tr><th>Remaining Calories</th><th class="remaining-calories difference">400</th></tr>
       </tfoot>
     </table>
   </div>
@@ -43,8 +45,8 @@
         <tbody>
         </tbody>
         <tfoot>
-          <tr><th class="total-calories">Total Calories</th><th class="total-calories" id="total">100</th></tr>
-          <tr><th>Remaining Calories</th><th class="remaining-calories" id="difference">100</th></tr>
+          <tr><th>Total Calories</th><th class="total-calories total">0</th></tr>
+          <tr><th>Remaining Calories</th><th class="remaining-calories difference">600</th></tr>
         </tfoot>
       </table>
   </div>
@@ -57,8 +59,8 @@
         <tbody>
         </tbody>
         <tfoot>
-          <tr><th class="total-calories">Total Calories</th><th class="total-calories" id="total">100</th></tr>
-          <tr><th>Remaining Calories</th><th class="remaining-calories" id="difference">100</th></tr>
+          <tr><th>Total Calories</th><th class="total-calories total">0</th></tr>
+          <tr><th>Remaining Calories</th><th class="remaining-calories difference">800</th></tr>
         </tfoot>
       </table>
   </div>
@@ -71,8 +73,8 @@
         <tbody>
         </tbody>
         <tfoot>
-          <tr><th class="total-calories">Total Calories</th><th class="total-calories" id="total">100</th></tr>
-          <tr><th>Remaining Calories</th><th class="remaining-calories" id="difference">100</th></tr>
+          <tr><th>Total Calories</th><th class="total-calories total">0</th></tr>
+          <tr><th>Remaining Calories</th><th class="remaining-calories difference">200</th></tr>
         </tfoot>
       </table>
   </div>
