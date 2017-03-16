@@ -13,11 +13,11 @@ describe('#total-calories', function() {
   
   context('meal with food', function() {
     it ('calculates the total calories for a meal', function () {
-      var totalBreakfastCalories = $('.breakfast-list tfoot .total-calories .value').text();
+      var totalBreakfastCalories = $('.breakfast-list tfoot .total').text();
       assert.equal(totalBreakfastCalories, "136")
     });
     it ('calculates the remaining calories for a meal', function() {
-      var remainingBreakfastCalories = $('.breakfast-list tfoot .remaining-calories .value').text();
+      var remainingBreakfastCalories = $('.breakfast-list tfoot .difference').text();
       assert.equal(remainingBreakfastCalories, "64")
     });
   });
