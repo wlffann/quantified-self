@@ -13,5 +13,9 @@
         var totalBreakfastCalories = $('.breakfast-list tfoot .total-calories .value').text();
         assert.equal(totalBreakfastCalories, "136")
       });
+      it ('calculates the remaining calories for a meal', function() {
+        var remainingBreakfastCalories = $('.breakfast-list tfoot .remaining-calories .value').text();
+        assert.equal(remainingBreakfastCalories, "64")
+      });
     });
   })
