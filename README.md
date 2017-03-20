@@ -1,17 +1,9 @@
-# Quantified Self Starter Kit (Old School)
+# Quantified Self 
 
-This starter kit differs from the other QS starter kit, in that it does not use a build tool (webkit). Old school baby!
+![http://gph.is/1eii8Rt](http://gph.is/1eii8Rt)
 
-![http://i.giphy.com/anjRJ4nv9WJzO.gif](http://i.giphy.com/anjRJ4nv9WJzO.gif)
+Pearson’s Law:
 
-Just clone it down, and start editing HTML/JS/CSS.
+> “That which is measured improves. That which is measured and reported improves exponentially.” - Karl Pearson
 
-## Running Tests
-
-This project uses [Mocha](https://mochajs.org/) as the test runner, [Chai](http://chaijs.com/) for assertions, and [jQuery](https://jquery.com/) for integration test like functionality.
-
-To run your tests, run the following from your terminal
-
-`$ open test/foods-test.html`
-
-This will open and execute the tests in your browser
+A simple calorie tracker built on Javascript and jQuery. 
