@@ -11,7 +11,7 @@ describe("#date-carousel", function() {
   });
 
   after(function(){
-    localStorage.removeItem("foods_by_days_and_meals")
+    localStorage.removeItem("foodsByDaysAndMeals")
   });
 
   context("When a user visits the index page", function(){
@@ -21,16 +21,16 @@ describe("#date-carousel", function() {
       assert.equal(actualCurrentDate, expectedCurrentDate)
     });
 
-    it ("a date is added to foods_by_days_and_meals in localStorage", function(){
+    it ("a date is added to foodsByDaysAndMeals in localStorage", function(){
       var expectedCurrentDate = moment().format("MMMM Do, YYYY");
-      var datesJSON = localStorage.getItem("foods_by_days_and_meals");
+      var datesJSON = localStorage.getItem("foodsByDaysAndMeals");
       var dates = JSON.parse(datesJSON);
       var meals = dates[expectedCurrentDate];
       var breakfast = meals["breakfast"];
 
 
-      assert.equal(get_length(dates), 1);
-      assert.equal(get_length(meals), 4);
+      assert.equal(getLength(dates), 1);
+      assert.equal(getLength(meals), 4);
       assert.equal(breakfast.length, 0);
     });
   });
@@ -43,16 +43,16 @@ describe("#date-carousel", function() {
       assert.equal(actualCurrentDate, expectedCurrentDate)
     });
 
-    it ("a date is added to foods_by_days_and_meals in localStorage", function(){
+    it ("a date is added to foodsByDaysAndMeals in localStorage", function(){
       var expectedCurrentDate = moment().add(1, 'days').format("MMMM Do, YYYY");
-      var datesJSON = localStorage.getItem("foods_by_days_and_meals");
+      var datesJSON = localStorage.getItem("foodsByDaysAndMeals");
       var dates = JSON.parse(datesJSON);
       var meals = dates[expectedCurrentDate];
       var breakfast = meals["breakfast"];
 
 
-      assert.equal(get_length(dates), 2);
-      assert.equal(get_length(meals), 4);
+      assert.equal(getLength(dates), 2);
+      assert.equal(getLength(meals), 4);
       assert.equal(breakfast.length, 0);
     });
 
@@ -78,16 +78,16 @@ describe("#date-carousel", function() {
       assert.equal(actualCurrentDate, expectedCurrentDate)
     });
 
-    it ("a date is added to foods_by_days_and_meals in localStorage", function(){
+    it ("a date is added to foodsByDaysAndMeals in localStorage", function(){
       var expectedCurrentDate = moment().format("MMMM Do, YYYY");
-      var datesJSON = localStorage.getItem("foods_by_days_and_meals");
+      var datesJSON = localStorage.getItem("foodsByDaysAndMeals");
       var dates = JSON.parse(datesJSON);
       var meals = dates[expectedCurrentDate];
       var breakfast = meals["breakfast"];
 
 
-      assert.equal(get_length(dates), 4);
-      assert.equal(get_length(meals), 4);
+      assert.equal(getLength(dates), 4);
+      assert.equal(getLength(meals), 4);
       assert.equal(breakfast.length, 0);
     });
 
