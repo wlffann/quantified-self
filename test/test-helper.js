@@ -5,6 +5,11 @@ function createMealDay() {
   return mealDay;
 };
 
-function get_length(obj){
+function getLength(obj){
   return Object.keys(obj).length
+}
+
+function getPage(page, onLoad){
+  document.getElementById("diary-frame").src = page;
+  document.getElementById("diary-frame").onload = onLoad;
 }

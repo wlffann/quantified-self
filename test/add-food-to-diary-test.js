@@ -3,7 +3,9 @@ describe('#add-food-to-diary', function() {
 
   before(function(){
     $ = document.getElementById("diary-frame").contentWindow.$;
-    add_day();
+    localStorage.clear();
+    // document.getElementById("diary-frame").src = "../index.html";
+    // addDay();
   })
 
   after(function(){
@@ -12,6 +14,7 @@ describe('#add-food-to-diary', function() {
 
   context("When a user click a meal", function(){
     it("all foods with checked boxes get added to localStorage", function(){
+      getPage("../index.html", )
       localStorage.setItem('food-items', JSON.stringify([new Food("apple", 10)]));
       
       var food = $("#foods-list").children().last()
@@ -21,11 +24,10 @@ describe('#add-food-to-diary', function() {
       
       $("#breakfast-button").click();
       var expectedCurrentDate = moment().format("MMMM Do, YYYY");
-      var datesJSON = localStorage.getItem("foods_by_days_and_meals");
+      var datesJSON = localStorage.getItem("foodsByDaysAndMeals");
       var dates = JSON.parse(datesJSON);
       var meals = dates[expectedCurrentDate];
       var breakfast = meals["breakfast"];
-      console.log(breakfast);
       
       var actualName = breakfast[0].name;
       var actualCalories = breakfast[0].calories;

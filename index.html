@@ -7,13 +7,14 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.10.3/moment.js"></script>
-  <script src="./lib/date.js"></script>
+  <script src="./lib/redirectToFoodsPage.js"></script>
   <script src="./lib/foods.js"></script>
+  <script src="./lib/total-calories.js"></script>
+  <script src="./lib/total-calories-table.js" ></script>
   <script src="./lib/filter_foods.js"></script>
   <script src="./lib/addFoodToMeal.js"></script>
+  <script src="./lib/date.js"></script>
   <script src="./lib/common.js"></script>
-  <!--<script src="./lib/total-calories.js"></script>-->
-  <script src="./lib/index.js"></script>
   <link type="text/css" rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <link type="text/css" rel="stylesheet" href="./lib/foods.css" >
   <link type="text/css" rel="stylesheet" href="./lib/common.css" >
@@ -23,13 +24,8 @@
   <div class="col-md-6 current-date">
   </div>
   <button class="day-forward">Forward</button>
- <div class="col-md-6 breakfast-list">
-    <h1>Breakfast</h1>
-    <table class="breakfast-table" id="food-list">
-  <button class="day-forward">Foreward</button>
-  <div class="col-md-6 breakfast">
+  <div class="breakfast-list">
     <h1>Breakfast</h1> 
-    <table id="breakfast-list">
     <table>
       <thead>
         <tr><th>Name</th><th>Calories</th></tr>
@@ -42,7 +38,7 @@
       </tfoot>
     </table>
   </div>
-  <div class="col-md-6 lunch">
+  <div class="lunch-list">
     <h1>Lunch</h1>
     <table>
         <thead>
@@ -56,7 +52,7 @@
         </tfoot>
       </table>
   </div>
-  <div class="col-md-6 dinner">
+  <div class="dinner-list">
     <h1>Dinner</h1>
     <table>
         <thead>
@@ -70,7 +66,7 @@
         </tfoot>
       </table>
   </div>
-  <div class="col-md-6 snacks">
+  <div class="snacks-list">
     <h1>Snacks</h1>
     <table>
         <thead>
@@ -85,9 +81,9 @@
       </table>
   </div>
 
-  <div class="col-md-6">
+  <div class="">
     <h1>Foods</h1>
-    <button id="add-food">Create New</button>
+    <button class= "redirect" id="add-food">Create New</button>
     <h3>Add Selected To</h3>
 
     <div class="meal-buttons">
@@ -108,19 +104,15 @@
         </thead>
         <tbody id="foods-list">
         </tbody>
-        <tfoot>
-          <tr><th>Total Calories</th><th>100</th></tr>
-          <tr><th>Remaining Calories</th><th></th></tr>
-        </tfoot>
       </table>
   </div>
 
-  <div class="col-md-6 totals-list">
+  <div class="totals-list">
     <h1>Totals</h1>
     <table class="total-table" id="foods-list">
         <tfoot>
           <tr><th class="total-calories">Goal Calories</th><th class="total-calories" id="goal-total">2000</th></tr>
-          <tr><th class="calories-consumed">Calories Consumed</th><th id="grand-total" class="calories-consumed"></th></tr>
+          <tr><th class="calories-consumed">Calories Consumed</th><th id="consumed" class="calories-consumed"></th></tr>
           <tr><th class="calories-remaining">Remaining Calories</th><th class="calories-remaining" id="remaining"></th></tr>
         </tfoot>
       </table>
