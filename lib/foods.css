@@ -24,6 +24,10 @@ td.food-delete {
   width: 328px;
 }
 
+.food-id {
+  display: none;
+}
+
 #create-form, #food-filter {
   width: 300px;
   position:relative;
